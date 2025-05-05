@@ -33,7 +33,6 @@ yarn-error.log*
 # opennext
 /.open-next
 /.wrangler
-open-next.config.ts
 
 # typescript
 *.tsbuildinfo
