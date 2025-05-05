@@ -9,7 +9,8 @@
     "preview": "opennextjs-cloudflare build && wrangler dev",
     "deploy": "opennextjs-cloudflare build && wrangler deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rmdir /s /q .next && rmdir /s /q .open-next"
   },
   "dependencies": {
     "@react-email/components": "^0.0.7",
