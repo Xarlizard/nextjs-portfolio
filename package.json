@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -38,7 +39,6 @@
     "typescript": "5.1.5"
   },
   "devDependencies": {
-    "@types/react-vertical-timeline-component": "^3.3.3",
-    "wrangler": "^4.14.1"
+    "@types/react-vertical-timeline-component": "^3.3.3"
   }
 }
