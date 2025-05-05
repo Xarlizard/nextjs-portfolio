@@ -1,7 +1,6 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact, FaNodeJs, FaPython, FaCloud } from "react-icons/fa";
-import { SiNextdotjs, SiJavascript, SiMongodb } from "react-icons/si";
+import { FaReact, FaNodeJs, FaCloud } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 import circleImg from "@/public/circleImg.png";
 import codeticketsImg from "@/public/codeticketsImg.png";
 import tldrawImg from "@/public/tldrawImg.png";

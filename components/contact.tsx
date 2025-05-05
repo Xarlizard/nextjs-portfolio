@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const [isPending, setIsPending] = useState(false);
 
   return (
     <motion.section
@@ -41,15 +42,22 @@ export default function Contact() {
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setIsPending(true);
+
+          const formData = new FormData(e.currentTarget);
           const { data, error } = await sendEmail(formData);
 
           if (error) {
             toast.error(error);
+            setIsPending(false);
             return;
           }
 
           toast.success("Email sent successfully!");
+          setIsPending(false);
+          e.currentTarget.reset(); // Reset the form after submission
         }}
       >
         <input
@@ -67,7 +75,7 @@ export default function Contact() {
           required
           maxLength={5000}
         />
-        <SubmitBtn />
+        <SubmitBtn isPending={isPending} />
       </form>
     </motion.section>
   );
