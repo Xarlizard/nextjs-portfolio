@@ -20,13 +20,17 @@ export default function Experience() {
       <SectionHeading>My Experience</SectionHeading>
       <div className="relative w-full max-w-[48rem]">
         {/* Vertical Line */}
-        <div className="absolute top-0 left-[10%] h-full w-[2px] bg-gray-300 dark:bg-gray-600"></div>
+        <div className="absolute top-0 left-[10%] sm:left-1/2 h-full w-[2px] bg-gray-300 dark:bg-gray-600 transform sm:-translate-x-1/2"></div>
 
         {/* Timeline Items */}
         {experiencesData.map((experience, index) => (
           <div
             key={index}
-            className="relative mb-12 flex items-center justify-start sm:justify-center"
+            className={`relative mb-12 flex items-center ${
+              index % 2 === 0
+                ? "sm:justify-start justify-end"
+                : "sm:justify-end justify-end"
+            }`}
           >
             {/* Icon or Arrow */}
             <div
@@ -51,7 +55,11 @@ export default function Experience() {
             </div>
 
             {/* Content */}
-            <div className="ml-[12%] w-[80%]">
+            <div
+              className={`w-[calc(50%-1rem)] sm:max-w-[calc(50%-1rem)] ${
+                index % 2 === 0 ? "sm:pr-8 pr-4" : "sm:pl-8 pl-4"
+              }`}
+            >
               <h3 className="text-lg font-semibold">{experience.title}</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {experience.company}
