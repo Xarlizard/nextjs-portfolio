@@ -34,14 +34,13 @@ export default function Experience() {
           >
             {/* Icon or Arrow */}
             <div
-              className={`absolute top-0 w-8 h-8 rounded-full flex items-center justify-center transform -translate-y-1/2 ${
+              className={`absolute top-0 w-8 h-8 rounded-full flex items-center justify-center ${
                 theme === "dark"
                   ? "bg-gray-700 text-white"
                   : "bg-gray-200 text-black"
               } sm:block hidden`}
               style={{
                 left: "50%", // Center the circle on the vertical bar
-                transform: "translate(-50%, -50%)", // Center the icon within the circle
               }}
             >
               {experience.icon ? experience.icon : <FaBriefcase />}
