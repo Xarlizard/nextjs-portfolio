@@ -1,9 +1,9 @@
 import React from "react";
 import { FaReact, FaNodeJs, FaCloud } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
-export const circleImg = "/circleImg.png";
-export const codeticketsImg = "/codeticketsImg.png";
-export const tldrawImg = "/tldrawImg.png";
+export const circleImg = "/images/circleImg.png";
+export const codeticketsImg = "/images/codeticketsImg.png";
+export const tldrawImg = "/images/tldrawImg.png";
 
 export const links = [
   {
