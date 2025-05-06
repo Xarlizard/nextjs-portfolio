@@ -28,8 +28,8 @@ export default function Experience() {
             key={index}
             className={`relative mb-12 flex items-center ${
               index % 2 === 0
-                ? "sm:justify-start justify-end"
-                : "sm:justify-end justify-end"
+                ? "sm:justify-start justify-center"
+                : "sm:justify-end justify-center"
             }`}
           >
             {/* Icon or Arrow */}
@@ -44,7 +44,7 @@ export default function Experience() {
                 transform: "translateX(-50%)",
               }}
             >
-              <FaBriefcase />
+              {experience.icon}
             </div>
             <div
               className="absolute top-0 w-4 h-4 transform -translate-y-1/2 sm:hidden"
@@ -59,8 +59,8 @@ export default function Experience() {
 
             {/* Content */}
             <div
-              className={`w-[calc(50%-1rem)] sm:max-w-[calc(50%-1rem)] ${
-                index % 2 === 0 ? "sm:pr-8 pr-4" : "sm:pl-8 pl-4"
+              className={`w-[80%] sm:w-[calc(50%-1rem)] ${
+                index % 2 === 0 ? "sm:pr-8" : "sm:pl-8"
               }`}
             >
               <h3 className="text-lg font-semibold">{experience.title}</h3>
