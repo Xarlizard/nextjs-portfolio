@@ -33,9 +33,13 @@ export default function Experience() {
             {/* Icon */}
             <div
               className={`absolute top-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                theme === "dark" ? "bg-gray-700 text-white" : "bg-gray-200 text-black"
+                theme === "dark"
+                  ? "bg-gray-700 text-white"
+                  : "bg-gray-200 text-black"
               } transform -translate-y-1/2 ${
-                index % 2 === 0 ? "-translate-x-1/2 left-1/2" : "-translate-x-1/2 left-1/2"
+                index % 2 === 0
+                  ? "-translate-x-1/2 left-1/2"
+                  : "-translate-x-1/2 left-1/2"
               }`}
             >
               {experience.icon || <FaBriefcase />}
@@ -44,7 +48,9 @@ export default function Experience() {
             {/* Content */}
             <div
               className={`w-[calc(50%-2rem)] p-4 rounded-lg shadow-md ${
-                theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
+                theme === "dark"
+                  ? "bg-gray-800 text-white"
+                  : "bg-gray-100 text-black"
               } ${index % 2 === 0 ? "text-left" : "text-right"}`}
             >
               <h3 className="font-semibold text-lg">{experience.title}</h3>

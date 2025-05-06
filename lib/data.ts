@@ -34,15 +34,15 @@ export const links = [
 export const experiencesData = [
   {
     title: "FRONTEND WEB DEVELOPER (REACT)",
-    location: "Mataro (remote), Spain",
+    location: "Aplicaciones Web Mardo, S.L. (Codetickets) - Mataro (remote), Spain",
     description:
       "Currently driving frontend development at APLICACIONES WEB MARDO, S.L. in charge of the solo-team at Codetickets, utilizing React 19.0 and related technologies to build robust and scalable applications. Proficient in integrating with custom APIs built on RESTful/CRUD principles and implementing Server-Side Rendering (SSR) with the frameworks ReactRouter v7 (Remix).",
     icon: React.createElement(FaReact),
     date: "20/11/2024 - CURRENT",
   },
   {
-    title: "FULLSTACK WEB DEVELOPER (Freelance / PIXELIMPERIUM)",
-    location: "Ibiza (remote), Spain",
+    title: "FULLSTACK WEB DEVELOPER",
+    location: "Pixelimperium S.L. - Ibiza (remote), Spain",
     description:
       "Successfully managed the full lifecycle of eCommerce projects, leveraging a diverse tech stack including React and Next.js for the frontend and Node.js, Python, and Java for backend development. Experienced in deploying and managing applications on various cloud platforms (AWS, Cloudflare Pages, Vercel, Netlify).",
     icon: React.createElement(SiNextdotjs),
@@ -50,7 +50,7 @@ export const experiencesData = [
   },
   {
     title: "IT CONSULTANT & APP(S) DEVELOPER",
-    location: "Molins De Rei, Spain",
+    location: "DR FIN&TRUST - Molins De Rei, Spain",
     description:
       "Contributed to the development of finance-focused applications using React & React Native on the frontend and NodeJS and Java on the backend, deployed on AWS and Oracle Cloud Servers. Took a leadership role in training junior developers.",
     icon: React.createElement(FaReact),
@@ -58,7 +58,7 @@ export const experiencesData = [
   },
   {
     title: "IT CONSULTANT & WEB DEVELOPER JUNIOR",
-    location: "Hospitalet de Llobregat, Spain",
+    location: "Businessprinter, S.L. - Hospitalet de Llobregat, Spain",
     description:
       "Oversaw and co-managed the IT department and a team of technicians and developers, team in charge of developing and maintaining web applications using technologies such as React + Node.js, PHP (Wordpress), and Angular+Java.",
     icon: React.createElement(FaNodeJs),
@@ -66,7 +66,7 @@ export const experiencesData = [
   },
   {
     title: "SYSTEM ADMIN (L2) & JUNIOR FRONTEND DEVELOPER",
-    location: "Cornellà, Spain",
+    location: "MagnumObject, S.L. - Cornellà, Spain",
     description:
       "Gained initial experience with React development while managing IT systems and networks for B2B clients.",
     icon: React.createElement(FaCloud),
@@ -112,9 +112,9 @@ export const skillsData = [
   "MongoDB",
   "Redux",
   "GraphQL",
-  "Apollo",
+  "Astro",
   "Express",
-  "PostgreSQL",
+  "tRPC",
   "Python",
   "Shadcdn",
   "Framer Motion",

@@ -26,13 +26,13 @@ export default function About() {
         the React ecosystem, including proficiency in{" "}
         <span className="font-medium">React 19.0</span>,{" "}
         <span className="font-medium">React Router v7</span>, and modern build
-        tools like <span className="font-medium">Nextjs/Vite/Apollo</span>. Expertise in
-        developing and consuming{" "}
+        tools like <span className="font-medium">Nextjs/Vite/Astro</span>.
+        Expertise in developing and consuming{" "}
         <span className="font-medium">RESTful APIs</span> and implementing{" "}
         <span className="font-medium">Server-Side Rendering (SSR)</span> for
         enhanced performance and SEO. Proven ability to collaborate effectively
-        within cross-functional teams, apply modern web development practices,
-        and ensure adherence to accessibility guidelines.
+        within cross-functional teams (agile), apply modern web development
+        practices, and ensure adherence to accessibility guidelines.
       </p>
     </motion.section>
   );
