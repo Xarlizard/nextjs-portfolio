@@ -27,7 +27,9 @@ export default function Experience() {
           <div
             key={index}
             className={`relative mb-12 flex items-center ${
-              index % 2 === 0 ? "justify-start" : "justify-end"
+              index % 2 === 0
+                ? "sm:justify-start justify-end"
+                : "sm:justify-end justify-end"
             }`}
           >
             {/* Icon */}
@@ -38,29 +40,27 @@ export default function Experience() {
                   : "bg-gray-200 text-black"
               } transform -translate-y-1/2 ${
                 index % 2 === 0
-                  ? "-translate-x-1/2 left-1/2"
-                  : "-translate-x-1/2 left-1/2"
+                  ? "sm:-translate-x-1/2 sm:left-1/2 left-auto right-0"
+                  : "sm:-translate-x-1/2 sm:left-1/2 left-auto right-0"
               }`}
             >
-              {experience.icon || <FaBriefcase />}
+              <FaBriefcase />
             </div>
 
             {/* Content */}
             <div
-              className={`w-[calc(50%-2rem)] p-4 rounded-lg shadow-md ${
-                theme === "dark"
-                  ? "bg-gray-800 text-white"
-                  : "bg-gray-100 text-black"
-              } ${index % 2 === 0 ? "text-left" : "text-right"}`}
+              className={`w-[calc(50%-1rem)] sm:max-w-[calc(50%-1rem)] ${
+                index % 2 === 0 ? "sm:pr-8 pr-0" : "sm:pl-8 pl-0"
+              }`}
             >
-              <h3 className="font-semibold text-lg">{experience.title}</h3>
-              <h4 className="text-sm text-gray-600 dark:text-gray-400">
-                {experience.location}
-              </h4>
-              <p className="mt-2 text-sm">{experience.description}</p>
-              <span className="text-xs text-gray-500 dark:text-gray-400">
+              <h3 className="text-lg font-semibold">{experience.title}</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {experience.company}
+              </p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
                 {experience.date}
-              </span>
+              </p>
+              <p className="text-sm">{experience.description}</p>
             </div>
           </div>
         ))}
