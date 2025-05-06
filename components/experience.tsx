@@ -20,39 +20,38 @@ export default function Experience() {
       <SectionHeading>My Experience</SectionHeading>
       <div className="relative w-full max-w-[48rem]">
         {/* Vertical Line */}
-        <div className="absolute top-0 left-4 sm:left-1/2 h-full w-[2px] bg-gray-300 dark:bg-gray-600 transform sm:-translate-x-1/2"></div>
+        <div className="absolute top-0 left-[10%] h-full w-[2px] bg-gray-300 dark:bg-gray-600"></div>
 
         {/* Timeline Items */}
         {experiencesData.map((experience, index) => (
           <div
             key={index}
-            className={`relative mb-12 flex items-center ${
-              index % 2 === 0
-                ? "sm:justify-start justify-end"
-                : "sm:justify-end justify-end"
-            }`}
+            className="relative mb-12 flex items-center justify-start sm:justify-center"
           >
-            {/* Icon */}
+            {/* Icon or Arrow */}
             <div
-              className={`absolute top-0 w-8 h-8 rounded-full flex items-center justify-center ${
+              className={`absolute top-0 w-8 h-8 rounded-full flex items-center justify-center transform -translate-y-1/2 ${
                 theme === "dark"
                   ? "bg-gray-700 text-white"
                   : "bg-gray-200 text-black"
-              } transform -translate-y-1/2 ${
-                index % 2 === 0
-                  ? "sm:-translate-x-1/2 sm:left-1/2 left-4"
-                  : "sm:-translate-x-1/2 sm:left-1/2 left-4"
-              }`}
+              } sm:block hidden`}
+              style={{ left: "10%" }}
             >
               <FaBriefcase />
             </div>
+            <div
+              className="absolute top-0 w-4 h-4 transform -translate-y-1/2 sm:hidden"
+              style={{ left: "10%" }}
+            >
+              <div
+                className={`w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[6px] ${
+                  theme === "dark" ? "border-l-gray-700" : "border-l-gray-300"
+                }`}
+              ></div>
+            </div>
 
             {/* Content */}
-            <div
-              className={`w-[calc(50%-1rem)] sm:max-w-[calc(50%-1rem)] ${
-                index % 2 === 0 ? "sm:pr-8 pr-4" : "sm:pl-8 pl-4"
-              }`}
-            >
+            <div className="ml-[12%] w-[80%]">
               <h3 className="text-lg font-semibold">{experience.title}</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {experience.company}
