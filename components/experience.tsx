@@ -40,11 +40,11 @@ export default function Experience() {
                   : "bg-gray-200 text-black"
               } sm:block hidden`}
               style={{
-                left: "50%",
-                transform: "translateX(-50%)",
+                left: "50%", // Center the circle on the vertical bar
+                transform: "translate(-50%, -50%)", // Center the icon within the circle
               }}
             >
-              {experience.icon}
+              {experience.icon ? experience.icon : <FaBriefcase />}
             </div>
             <div
               className="absolute top-0 w-4 h-4 transform -translate-y-1/2 sm:hidden"
