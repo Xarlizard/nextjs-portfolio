@@ -40,12 +40,11 @@ export default function Experience() {
                   : "bg-gray-200 text-black"
               } sm:block hidden`}
               style={{
-                left: index % 2 === 0 ? "calc(50% - 1rem)" : "calc(50% - 1rem)",
-                transform:
-                  index % 2 === 0 ? "translateX(-50%)" : "translateX(-50%)",
+                left: "50%",
+                transform: "translateX(-50%)",
               }}
             >
-              {experience.icon}
+              <FaBriefcase />
             </div>
             <div
               className="absolute top-0 w-4 h-4 transform -translate-y-1/2 sm:hidden"
