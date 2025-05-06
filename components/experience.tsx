@@ -20,7 +20,7 @@ export default function Experience() {
       <SectionHeading>My Experience</SectionHeading>
       <div className="relative w-full max-w-[48rem]">
         {/* Vertical Line */}
-        <div className="absolute top-0 left-8 sm:left-1/2 h-full w-[2px] bg-gray-300 dark:bg-gray-600 transform sm:-translate-x-1/2"></div>
+        <div className="absolute top-0 left-4 sm:left-1/2 h-full w-[2px] bg-gray-300 dark:bg-gray-600 transform sm:-translate-x-1/2"></div>
 
         {/* Timeline Items */}
         {experiencesData.map((experience, index) => (
@@ -40,8 +40,8 @@ export default function Experience() {
                   : "bg-gray-200 text-black"
               } transform -translate-y-1/2 ${
                 index % 2 === 0
-                  ? "sm:-translate-x-1/2 sm:left-1/2 left-8"
-                  : "sm:-translate-x-1/2 sm:left-1/2 left-8"
+                  ? "sm:-translate-x-1/2 sm:left-1/2 left-4"
+                  : "sm:-translate-x-1/2 sm:left-1/2 left-4"
               }`}
             >
               <FaBriefcase />
@@ -50,7 +50,7 @@ export default function Experience() {
             {/* Content */}
             <div
               className={`w-[calc(50%-1rem)] sm:max-w-[calc(50%-1rem)] ${
-                index % 2 === 0 ? "sm:pr-8 pr-0" : "sm:pl-8 pl-0"
+                index % 2 === 0 ? "sm:pr-8 pr-4" : "sm:pl-8 pl-4"
               }`}
             >
               <h3 className="text-lg font-semibold">{experience.title}</h3>
