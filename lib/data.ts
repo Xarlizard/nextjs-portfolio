@@ -31,6 +31,7 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
+
 export const experiencesData = [
   {
     title: "FRONTEND WEB DEVELOPER (REACT)",
@@ -123,4 +124,11 @@ export const skillsData = [
   "Python",
   "Shadcdn",
   "Framer Motion",
+] as const;
+
+export const hostingProviders = [
+  { name: "Cloudflare", logo: "/images/logo_cloudflare.png", link: "https://portfolio.app-org-es.workers.dev/" },
+  { name: "Netlify", logo: "/images/logo_netlify.png", link: "https://europass.netlify.app/" },
+  { name: "Vercel", logo: "/images/logos/vercel.png", link: "https://vercel.com" },
+  { name: "Github", logo: "/images/logo_github.png", link: "https://github.com/Xarlizard/xarlizard/tree/gh-pages" },
 ] as const;
