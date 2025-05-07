@@ -39,34 +39,38 @@ export default function Footer() {
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         >
           {hostingProvider}
+          {/* Dropdown Menu */}
+          {isDropdownOpen && (
+            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+              <ul className="py-2">
+                {hostingProviders.map((provider) => (
+                  <li
+                    key={provider.name}
+                    className="px-4 py-2 hover:bg-gray-100"
+                  >
+                    <a
+                      href={provider.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2"
+                    >
+                      <img
+                        src={provider.logo}
+                        alt={`${provider.name} logo`}
+                        className="w-5 h-5"
+                      />
+                      <span className="text-sm text-gray-700">
+                        {provider.name}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </span>{" "}
         hosting.
       </p>
-
-      {/* Dropdown Menu */}
-      {isDropdownOpen && (
-        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg">
-          <ul className="py-2">
-            {hostingProviders.map((provider) => (
-              <li key={provider.name} className="px-4 py-2 hover:bg-gray-100">
-                <a
-                  href={provider.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2"
-                >
-                  <img
-                    src={provider.logo}
-                    alt={`${provider.name} logo`}
-                    className="w-5 h-5"
-                  />
-                  <span className="text-sm text-gray-700">{provider.name}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </footer>
   );
 }
