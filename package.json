@@ -15,7 +15,7 @@
     "clean": "rmdir /s /q .next && rmdir /s /q .open-next",
     "vercel-deploy": "vercel deploy --prod",
     "vercel-install": "npm install --ignore-scripts",
-    "vercel-build": "NEXT_TELEMETRY_DISABLED=1 next build",
+    "vercel-build": "npm uninstall @cloudflare/workerd-linux-64 @opennextjs/cloudflare && next build",
     "build:cloudflare": "opennextjs-cloudflare build",
     "build:vercel": "next build"
   },
