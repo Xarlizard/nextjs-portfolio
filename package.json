@@ -14,7 +14,8 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "clean": "rmdir /s /q .next && rmdir /s /q .open-next",
     "vercel-deploy": "vercel deploy --prod",
-    "vercel-install": "npm install --ignore-scripts"
+    "vercel-install": "npm install --ignore-scripts",
+    "vercel-build": "npm install @cloudflare/workerd-linux-64 && npm run build"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.0.0-beta.4",
