@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm install --omit=optional && next build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install --omit=optional",
+  "framework": "nextjs"
+} 

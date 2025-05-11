@@ -16,8 +16,7 @@
     "vercel-deploy": "vercel deploy --prod",
     "vercel-install": "npm install --ignore-scripts",
     "vercel-build": "npm uninstall @cloudflare/workerd-linux-64 @opennextjs/cloudflare && next build",
-    "build:cloudflare": "opennextjs-cloudflare build",
-    "build:vercel": "next build"
+    "build:cloudflare": "opennextjs-cloudflare build"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.0.0-beta.4",
