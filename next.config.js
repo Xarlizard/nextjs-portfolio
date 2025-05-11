@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const nextConfig = {
   images: {
@@ -13,7 +12,10 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+// Only initialize OpenNext for Cloudflare when deploying to Cloudflare
+if (process.env.CLOUDFLARE) {
+  const { initOpenNextCloudflareForDev } = await import("@opennextjs/cloudflare");
+  initOpenNextCloudflareForDev();
+}
 
-// Initialize OpenNext for Cloudflare
-initOpenNextCloudflareForDev();
+export default nextConfig;

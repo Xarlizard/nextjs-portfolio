@@ -21,5 +21,9 @@
       // The service should match the "name" of your worker
       "service": "portfolio"
     }
-  ]
+  ],
+  "vars": {
+    // define the CLOUDFLARE variable in order to use OpenNext for Cloudflare
+    "CLOUDFLARE": "true"
+  }
 }
