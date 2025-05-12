@@ -14,6 +14,7 @@ export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
+  const avatarImg = "/images/avatar_img.jpeg";
   return (
     <section
       ref={ref}
@@ -31,7 +32,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://charlie.icu/src/images/avatar_img.jpeg"
+              src={avatarImg}
               alt="Charlie portrait"
               width="192"
               height="192"
