@@ -1,44 +1,70 @@
 "use client";
 
+import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({ title, description, tags, imageUrl, url }: ProjectProps) {
+export default function Project({
+  title,
+  description,
+  tags,
+  imageUrl,
+  url,
+}: ProjectProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
-    <motion.a
+    <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="block bg-gray-100 border border-black/5 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition dark:bg-white/10 dark:hover:bg-white/20"
+      className="block"
     >
-      <div className="relative">
-        <Image
-          src={imageUrl}
-          alt={title}
-          width={400}
-          height={300}
-          className="w-full h-auto object-cover"
-        />
-      </div>
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{title}</h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">{description}</p>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              className="text-xs font-medium text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </motion.a>
+      <motion.div
+        ref={ref}
+        style={{
+          scale: scaleProgess,
+          opacity: opacityProgess,
+        }}
+        className="group mb-3 sm:mb-8 last:mb-0"
+      >
+        <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+          <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+            <h3 className="text-2xl font-semibold">{title}</h3>
+            <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+              {description}
+            </p>
+            <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+              {tags.map((tag, index) => (
+                <li
+                  className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                  key={index}
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="absolute top-0 left-0 w-full h-full">
+            <Image
+              src={imageUrl}
+              alt={title}
+              layout="fill"
+              objectFit="cover"
+              className="opacity-50 sm:opacity-100"
+            />
+          </div>
+        </section>
+      </motion.div>
+    </a>
   );
 }
