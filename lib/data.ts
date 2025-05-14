@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import React from "react";
 import { FaReact, FaNodeJs, FaCloud } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
@@ -91,6 +92,7 @@ export const projectsData = [
       "Ticketing Saas as vendor portal dashboard/retail for some public and private institutions, managing and serving their event tickets.",
     tags: ["React", "Node.js", "Cloudflare R2 Database", "Bootstrap", "AWS"],
     imageUrl: codeticketsImg,
+    url: "https://codetickets2.pages.dev/portal/zumzeigcooperativa",
   },
   {
     title: "TLDRAW with Nextjs",
@@ -98,6 +100,7 @@ export const projectsData = [
       "Tldraw editor made with React and shadcdn, integrating AI with OpenAI API to generate custom SVG forms.",
     tags: ["tRPC", "React", "TypeScript", "Next.js", "Tailwind", "Shadcdn"],
     imageUrl: tldrawImg,
+    url: "https://vidext.netlify.app/",
   },
   {
     title: "Circle",
@@ -105,6 +108,7 @@ export const projectsData = [
       "A simple project landing page featuring a modern UI layout, responsive and designed for Ironhack's Bootcamp.",
     tags: ["React", "CSS Modules", "ReactRouter", "Bootstrap", "Axios"],
     imageUrl: circleImg,
+    url: "https://ironhack-charlie-final-project-1.pages.dev/",
   },
 ] as const;
 
